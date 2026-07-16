@@ -44,39 +44,3 @@ portfolio/
 └── README.md
 ```
 
----
-
-
-3.  Start the local development server:
-    ```bash
-    npm run dev
-    ```
-    The Vite app will open at: `http://localhost:5173/`
-
----
-
-## Testing & Verifying
--   **Public Website**: Go to `http://localhost:5173/` to view the landing page, search projects, test the light/dark toggle, and submit the contact form.
--   **Admin Dashboard**: Go to `http://localhost:5173/admin/login` and log in with your superuser credentials. Try adding, updating, and deleting projects and certificates.
-
----
-
-## Production Deployment Checklist
-
-### 1. Backend on Render
--   Create a PostgreSQL database on Render.
--   Deploy the Backend as a Web Service.
--   Set Environment Variables on Render:
-    ```env
-    DATABASE_URL=your-postgresql-url
-    SECRET_KEY=your-production-secret-key
-    DEBUG=False
-    ALLOWED_HOSTS=your-backend-domain.onrender.com,your-frontend-domain.vercel.app
-    ```
-
-### 2. Frontend on Vercel or Netlify
--   Deploy the frontend directory.
--   Set environment variables:
-    ```env
-    VITE_API_BASE_URL=https://your-backend-domain.onrender.com/api
-    ```
