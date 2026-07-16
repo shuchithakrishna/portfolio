@@ -46,55 +46,7 @@ portfolio/
 
 ---
 
-## Local Setup & Development Instructions
 
-### Prerequisite
-Ensure you have **Python (v3.10+)** and **Node.js (v18+)** installed.
-
----
-
-### 1. Backend Setup (Django)
-
-1.  Navigate to the `backend/` folder:
-    ```bash
-    cd backend
-    ```
-2.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    # Alternatively, run:
-    pip install django djangorestframework django-cors-headers djangorestframework-simplejwt pillow psycopg2-binary
-    ```
-3.  Prepare migrations and run database sync:
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
-    *(By default, this will create a local `db.sqlite3` database file since no PostgreSQL settings are present in the environment variables. To connect to PostgreSQL, configure your `.env` variables as outlined in `database/postgresql_setup.md`)*
-4.  Create an Admin Superuser for logging into the Admin Dashboard:
-    ```bash
-    python manage.py createsuperuser
-    ```
-    *   Set username: e.g. `admin`
-    *   Set password: e.g. `adminpassword`
-5.  Start the development server:
-    ```bash
-    python manage.py runserver
-    ```
-    The API service will launch at: `http://127.0.0.1:8000/`
-
----
-
-### 2. Frontend Setup (React)
-
-1.  Open a new terminal window and navigate to the `frontend/` folder:
-    ```bash
-    cd frontend
-    ```
-2.  Install npm packages:
-    ```bash
-    npm install
-    ```
 3.  Start the local development server:
     ```bash
     npm run dev
